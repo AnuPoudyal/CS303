@@ -1,15 +1,18 @@
+/* eslint-disable require-jsdoc */
+/* eslint-disable no-unused-vars */
 "use strict";
 
-function load() {
-	let id = document.getElementById("result");
-	id.innerHTML = "Lab W1D2";
-}
+// See tests.js for behavior
+
+
+
+
 
 function nameString(obj) {
     if (obj === null) {
         return "null argument";
     }
-    if (obj === undefined) {
+    if (obj === undefined || obj === null) {
         return "no object passed";
     }
     if (obj.length === 0) {
@@ -20,7 +23,8 @@ function nameString(obj) {
         arr.push(k)
     }
     arr.sort();
-
+ 
     let str = arr.join('.')
-    return str;
+    return str
 }
+

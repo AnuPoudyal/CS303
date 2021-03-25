@@ -1,10 +1,7 @@
-
-"use strict";
-/* mocha tests */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable require-jsdoc */
-
+"use strict";
 
 function mochaTests() {
     describe("nameString", function () {
@@ -23,5 +20,18 @@ function mochaTests() {
         it("null argument", function () {
             assert.equal(nameString(null), "null argument");
         });
-	});	
-}	
+	});		
+
+    describe("nameString", function () {
+        it("object has one property", function () {
+            assert.equal(nameString({a:5}), "a");
+        });
+	});		
+
+    describe("nameString", function () {
+        it("object has three properties", function () {
+            assert.equal(nameString({a:5, z:6, m:8}), "a.m.z");
+        });
+	});		
+	
+}
