@@ -4,16 +4,21 @@
 
 // Remove the even characters from string, e.g removeEvenCharacters("abcd") === "bd"
 function removeEvenCharacters(string) {
-	if (string === undefined) return "missing argument";
-  if (typeof string !== "string") return "argument is not string";
-  if (string.length === 0) return "";
-  let str = "";
-  for (let i = 1; i < string.length; i += 2) {
-    str += string[i];
-  }
-  return str;
+	if (string === undefined){ 
+		return "missing argument";
+	}
+	if (typeof string !== "string") {
+		return "argument not string";
+	}
+	if (string.length === 0){ return "";
 }
-console.log(removeEvenCharacters("abcd"));
+	let str = "";
+	for (let i = 1; i < string.length; i += 2) {
+	  str += string[i];
+	}
+	return str;
+  }
+  console.log(removeEvenCharacters("abcd"));
 
 // Sum the numbers that are greater than zero of array, e.g. sumPositiveNumbers([-1,4,5,-2,-3,10]) === 19
 // Must use the reduce method of the Array object to do this!!!
