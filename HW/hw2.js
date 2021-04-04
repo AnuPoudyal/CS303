@@ -8,22 +8,6 @@ if(n===1){
 }
 console.log(sum(5));
 
-//Question 2: - use recursion to implement print() method
-
-let linkedList = { value: 1 };
-linkedList.next = { value: 2 };
-linkedList.next.next = { value: 3 };
-linkedList.next.next.next = { value: 4 };
-linkedList.next.next.next.next = null;
-function print(linkedList){
-console.log(linkedList.value);
-}
-if(linkedList.next){
-    print(linkedList.next);
-}
-
-print(linkedList);
-
 
 
 
@@ -35,7 +19,24 @@ print(linkedList);
 //linkedlist.print() – format: LinkedList{ 1, 2, 5, 7 }
 
 
-
+let linkedList = {};
+linkedList.next = { value: 1 };
+linkedList.next.next = { value: 2 };
+linkedList.next.next.next = { value: 5 };
+linkedList.next.next.next.next = { value: 2 };
+linkedList.next.next.next.next.next = { value: 7, next: null };
+console.log(`linkedList {${printList(linkedList.next)}}`);
+let node = linkedList.next.next;
+linkedList.next = node;
+node = null;
+console.log(`linkedList {${printList(linkedList.next)}}`);
+function printList(linkedList) {
+if (linkedList.next == null) {
+return linkedList.value;
+ } else {
+return linkedList.value + ", " + printList(linkedList.next);
+ }
+}
 
 
 
