@@ -14,6 +14,8 @@ function printNumbers(from, to) {
   }
   printNumbers(1, 5);
 
+  
+
 
   /*• Question 2:
 • In the code below there’s a setTimeout call scheduled, then a heavy calculation is run, that takes more than 100ms to finish.
@@ -38,6 +40,12 @@ for(let j=0;j<1000000000;j++){
 }
 
 
+function area(){
 
-
+console.log(this);
+console.log(this.side);
+return this.side*this.side;
+}
+const square1={side:1 , area:area};
+console.log(area());
 

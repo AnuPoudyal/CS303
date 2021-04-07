@@ -45,3 +45,6 @@ function makeArmy() {
     console.log(army)//this will print numbers from 0-10 
     console.log(army[0]);//this will print 0
 
+
+
+
