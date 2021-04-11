@@ -40,12 +40,4 @@ for(let j=0;j<1000000000;j++){
 }
 
 
-function area(){
-
-console.log(this);
-console.log(this.side);
-return this.side*this.side;
-}
-const square1={side:1 , area:area};
-console.log(area());
 
