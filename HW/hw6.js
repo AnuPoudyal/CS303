@@ -68,3 +68,20 @@ Student.prototype.sort = function () {
   };
   
   john.sort();
+
+  /*Array.prototype.sort = function () {
+  for (let i = 0; i < this.length -1; i++) {
+    for (let j = i + 1; j < this.length; j++) {
+      if(this[i] > this[j]){
+        let temp = this[i];
+        this[i] = this[j];
+        this[j] = temp;
+      }
+    }
+  }
+  return this;
+}
+let arr = [40,50,10,20].sort();
+console.log(arr);
+
+*/
